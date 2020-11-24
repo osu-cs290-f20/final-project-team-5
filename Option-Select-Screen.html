@@ -1,56 +1,66 @@
 <!--This is going to be my container-->
 <html>
-  <head>
-    <meta charset="utf-8">
-	<title>Game Pal</title>
-	<link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header>
-	<h1 class="site-title"><a href="#">Game Pal for Buds</a></h1>
-	</header>
-	
-	<main>
-	  <div class="option-container">
-	    <div class="color-option-buttons">
-		  <p> Colors</p>
-		  <button class="color-green">green</button>
-		  <button class="color-blue">blue</button>
-		  <button class="color-yellow">yellow</button>
-		  <button class="color-black">black</button>
-		  <button class="color-white">white</button>
-		  <button class="color-purple">purple</button>
-		</div>
-		<div class="game-option-buttons">
-		  <p class="game-option-title">Select Your Options Here</p>
-		    <div class="players">
-		      <p class ="game-option-name">Number Of Players</p>
-		      <input type="number" id ="players" name="Players" step="1">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Game Pal</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<header>
+			<h1 class="site-title"><a href="#">Game Pal for Buds</a></h1>
+			<script src="options.js" charset="utf-8" defer></script>
+		</header>
+
+		<main>
+			<div class="option-container">
+				<div class="color-option-buttons">
+					<p> Colors</p>
+
+					<button class="color-green">green</button>
+					<button class="color-blue">blue</button>
+					<button class="color-yellow">yellow</button>
+					<button class="color-black">black</button>
+					<button class="color-white">white</button>
+					<button class="color-purple">purple</button>
+				</div>
+
+				<div class="game-option-buttons">
+					<p class="game-option-title">Select Your Options Here</p>
+					<div class="players">
+						<p class="game-option-name">Number Of Players</p>
+						<input type="number" id="players" name="Players" step="1">
+					</div>
+
+					<div class="points">
+						<p class="game-option-name">Point Counter</p>
+						<input type="radio" id="points-yes" name="Points" value="yes">
+						<label for="points-yes">Yes</label>
+						<input type="radio" id="points-no" name="Points" value="no">
+						<label for="points-no">No</label>
+					</div>
+
+					<div class="timer">
+						<p class="game-option-name">Timer</p>
+						<input type="radio" id="timer-yes" name="Timer" value="yes">
+						<label for="timer-yes">Yes</label>
+						<input type="radio" id="timer-no" name="Timer" value="no">
+						<label for="timer-no">No</label>
+					</div>
+
+					<div class="dice">
+						<p class="game-option-name">Dice</p>
+						<input type="radio" id="dice-yes" name="Dice" value="yes">
+						<label for="dice-yes">Yes</label>
+						<input type="radio" id="dice-no" name="Dice" value="no">
+						<label for="dice-no">No</label>
+					</div>
+
+					<button class="accept-button">Confirm Options</button>
+				</div>
 			</div>
-			<div class ="points">
-		      <p class ="game-option-name">Point Counter</p>
-		      <input type="radio" id ="points-yes" name ="Points" value = "yes">
-			  <label for="points-yes">Yes</label>
-			  <input type="radio" id ="points-no" name = "Points" value = "no">
-			  <label for="points-no">No</label>
-			</div>
-			<div class="timer">
-		      <p class ="game-option-name">Timer</p>
-		      <input type="radio" id ="timer-yes" name ="Timer" value = "yes">
-			  <label for="timer-yes">Yes</label>
-			  <input type="radio" id ="timer-no" name = "Timer" value = "no">
-			  <label for="timer-no">No</label>				
-			</div>
-	        <div class="dice">
-		      <p class ="game-option-name">Dice</p>
-		      <input type="radio" id ="dice-yes" name ="Dice" value = "yes">
-			  <label for="dice-yes">Yes</label>
-			  <input type="radio" id ="dice-no" name = "Dice" value = "no">
-			  <label for="dice-no">No</label>
-			</div>
-		  <button class="accept-button">Confirm Options</button>
-		</div>
-	  </div>
-	</main>
-  </body>
+		</main>
+	</body>
+
 </html>
