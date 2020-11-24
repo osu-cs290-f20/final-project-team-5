@@ -1,0 +1,67 @@
+.option-container{
+  border-style: solid;
+  border-width: 10px;
+  display: grid;
+  grid-template-columns: 20px 330px;
+  grid-column-gap: 150px;
+  max-width: 500;
+  max-height: 600;
+}
+
+.accept-button{
+  max-width: 100px;
+  max-height: 40px;
+  display: absolute;
+  bottom: 30 px;
+  margin-top: 50px;
+}
+
+.game-option-name{
+  font-size: 20px;	
+  border-style: inset;
+  width: 200px;
+}
+.game-option-buttons{
+}
+.color-purple{
+  background-color: purple;
+  color: purple; 
+  border: none;
+  width: 50px;
+  height: 50px;
+}
+.color-white{
+  background-color: white;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+}
+.color-black{
+  background-color: black;
+  color: black;
+  border: none;
+  width: 50px;
+  height: 50px;
+}
+.color-blue{
+  background-color: blue;
+  color: blue;
+  border: none;
+  width: 50px;
+  height: 50px;
+}
+.color-yellow{
+  background-color: yellow;
+  color: yellow;
+  border: none;
+  width: 50px;
+  height: 50px;
+}
+.color-green{
+  background-color: green;
+  color: green;
+  border: none;
+  width: 50px;
+  height: 50px;
+}
