@@ -36,7 +36,8 @@ a {
   text-align: center;
 }
 
-/* .radio-buttons {} do stuff here i guess*/
+.radio-buttons {}
+
 
 .radio-yes {
   display: inline-block;
@@ -49,10 +50,11 @@ a {
 
 
 /*
-*Changes here - Dylan
-*Tried reverting it back to how @Forrest did it, but couldn't get it to work.
-*Please change back.
-*/
+ * // Changes here - Dylan
+ * // Tried reverting it back to how @Forrest did it, but couldn't get it to work.
+ * // Please change back.
+ * I think it should work now
+ */
 .color-button {
   padding: 0;
   border: none;
