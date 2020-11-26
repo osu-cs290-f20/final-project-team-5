@@ -6,6 +6,7 @@ a {
 	text-decoration: none;
 	color: black;
 }
+
 .option-container {
   border-style: solid;
   border-width: 10px;
@@ -38,6 +39,10 @@ a {
   text-align: center;
 }
 
+.radio-buttons{
+
+}
+
 .radio-yes{
 	display: inline-block;
 }
@@ -50,6 +55,12 @@ a {
 	margin-left: 8px;
 }
 
+
+/*
+*Changes here - Dylan
+*Tried reverting it back to how @Forrest did it, but couldn't get it to work.
+*Please change back.
+*/
 .color-button {
   padding: 0;
   border: none;
@@ -110,3 +121,4 @@ a {
   height: 50px;
   margin-top: 10px;
 }
+
