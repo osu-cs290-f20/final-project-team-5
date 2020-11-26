@@ -27,7 +27,6 @@ colorButtons.addEventListener('click', function (event) {
 
     // console.log(rollDie(20));
 
-
     if (timing === true) {
         clearInterval(timerInterval);
         timing = false;
