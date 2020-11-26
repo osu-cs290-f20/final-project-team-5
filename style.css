@@ -22,50 +22,39 @@
   width: 200px;
 }
 
-.color-purple {
+.color-button {
+  padding: 0;
+  border: none;
+  width: 50px;
+  height: 50px;
+}
+
+.color-button.purple {
   background-color: purple;
   color: purple;
-  border: none;
-  width: 50px;
-  height: 50px;
 }
 
-.color-white {
+.color-button.white {
   background-color: white;
   color: white;
-  border: none;
-  width: 50px;
-  height: 50px;
 }
 
-.color-black {
+.color-button.black {
   background-color: black;
   color: black;
-  border: none;
-  width: 50px;
-  height: 50px;
 }
 
-.color-blue {
+.color-button.blue {
   background-color: blue;
   color: blue;
-  border: none;
-  width: 50px;
-  height: 50px;
 }
 
-.color-yellow {
+.color-button.yellow {
   background-color: yellow;
   color: yellow;
-  border: none;
-  width: 50px;
-  height: 50px;
 }
 
-.color-green {
+.color-button.green {
   background-color: green;
   color: green;
-  border: none;
-  width: 50px;
-  height: 50px;
 }
