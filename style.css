@@ -36,8 +36,17 @@ a {
   text-align: center;
 }
 
+<<<<<<< HEAD
 .radio-yes {
   display: inline-block;
+=======
+.radio-buttons{
+
+}
+
+.radio-yes{
+	display: inline-block;
+>>>>>>> f53574bb238c9c13bba222467f2f389e30a7a592
 }
 
 .radio-no {
@@ -45,6 +54,12 @@ a {
 
 }
 
+
+/*
+*Changes here - Dylan
+*Tried reverting it back to how @Forrest did it, but couldn't get it to work.
+*Please change back.
+*/
 .color-button {
   padding: 0;
   border: none;
@@ -80,4 +95,13 @@ a {
 .color-button.green {
   background-color: green;
   color: green;
+<<<<<<< HEAD
 }
+=======
+  border: none;
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+>>>>>>> f53574bb238c9c13bba222467f2f389e30a7a592
