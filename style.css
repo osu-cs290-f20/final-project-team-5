@@ -36,17 +36,10 @@ a {
   text-align: center;
 }
 
-<<<<<<< HEAD
+/* .radio-buttons {} do stuff here i guess*/
+
 .radio-yes {
   display: inline-block;
-=======
-.radio-buttons{
-
-}
-
-.radio-yes{
-	display: inline-block;
->>>>>>> f53574bb238c9c13bba222467f2f389e30a7a592
 }
 
 .radio-no {
@@ -65,6 +58,7 @@ a {
   border: none;
   width: 50px;
   height: 50px;
+  margin-top: 10px;
 }
 
 .color-button.purple {
@@ -95,13 +89,4 @@ a {
 .color-button.green {
   background-color: green;
   color: green;
-<<<<<<< HEAD
 }
-=======
-  border: none;
-  width: 50px;
-  height: 50px;
-  margin-top: 10px;
-}
-
->>>>>>> f53574bb238c9c13bba222467f2f389e30a7a592
