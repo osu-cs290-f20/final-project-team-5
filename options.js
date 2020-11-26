@@ -1,5 +1,8 @@
 let colorButtons = document.querySelector('div.color-option-buttons');
 
+let timerInterval;
+let timing;
+
 function rollDie(sides) {
     return Math.ceil((sides - 1) * Math.random());
 }
@@ -9,20 +12,26 @@ function timer(min) {
 
     let startTime = Date.now();
 
-    let interval = setInterval(intervalTimer, 1000);
+    timerInterval = setInterval(startTimer, 1000);
+    timing = true;
 
-    function intervalTimer() {
+    function startTimer() {
         let dateVar = new Date();
         let time = dateVar.getTime();
         console.log(Math.floor((time - startTime) / 1000));
-        console.log('time:', Math.floor(count / 60) + ':' + count % 60);
     }
 }
 
 colorButtons.addEventListener('click', function (event) {
     let target = event.target;
 
-    console.log(rollDie(20));
+    // console.log(rollDie(20));
 
-    timer(1);
+
+    if (timing === true) {
+        clearInterval(timerInterval);
+        timing = false;
+    }
+    else
+        timer(1);
 });

@@ -1,11 +1,12 @@
 h1 {
-	margin-left: 130px;
+  margin-left: 130px;
 }
 
 a {
-	text-decoration: none;
-	color: black;
+  text-decoration: none;
+  color: black;
 }
+
 .option-container {
   border-style: solid;
   border-width: 10px;
@@ -17,7 +18,7 @@ a {
 }
 
 .color-option-buttons {
-	margin-left: 25px;
+  margin-left: 25px;
 }
 
 .accept-button {
@@ -35,12 +36,12 @@ a {
   text-align: center;
 }
 
-.radio-yes{
-	display: inline-block;
+.radio-yes {
+  display: inline-block;
 }
 
-.radio-no{
-	display: inline-block;
+.radio-no {
+  display: inline-block;
 
 }
 
