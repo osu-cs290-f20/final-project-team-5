@@ -16,7 +16,7 @@
 		<main>
 			<div class="option-container">
 				<div class="color-option-buttons">
-					<p> Colors</p>
+					<p class = "color-header">Style</p>
 
 					<button class="color-button green">green</button>
 					<button class="color-button blue">blue</button>
@@ -34,15 +34,21 @@
 					</div>
 
 					<div class="points">
-						<p class="game-option-name">Point Counter</p>
-						<input type="radio" id="points-yes" name="Points" value="yes">
-						<label for="points-yes">Yes</label>
-						<input type="radio" id="points-no" name="Points" value="no">
-						<label for="points-no">No</label>
+						<p class="game-option-name">Timer</p>
+						<div class = "radio-buttons">
+							<div class = "radio-yes">
+								<input type="radio" id="points-yes" name="Points" value="yes">
+								<label for="points-yes">Yes</label>
+							</div>
+							<div class = "radio-no">
+								<input type="radio" id="points-no" name="Points" value="no">
+								<label for="points-no">No</label>
+							</div>
+						</div>
 					</div>
 
 					<div class="timer">
-						<p class="game-option-name">Timer</p>
+						<p class="game-option-name">Point Counter</p>
 						<input type="radio" id="timer-yes" name="Timer" value="yes">
 						<label for="timer-yes">Yes</label>
 						<input type="radio" id="timer-no" name="Timer" value="no">
