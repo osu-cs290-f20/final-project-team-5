@@ -1,21 +1,5 @@
-<!--This is going to be my container-->
-<html>
-
-	<head>
-		<meta charset="utf-8">
-		<title>Game Pal</title>
-		<link rel="stylesheet" href="style.css">
-	</head>
-
-	<body>
-		<header>
-			<h1 class="site-title"><a href="#">Game Pal for Buds</a></h1>
-			<script src="options.js" charset="utf-8" defer></script>
-		</header>
-
-		<main>
-		<div class = "game-container" >
-				<img class ="bennyPicture leftPicture"  src="https://web.engr.oregonstate.edu/~perezalj/Benny/Beaver" alt="Benny">
+{{#if optionsPage}}
+<img class ="bennyPicture leftPicture"  src="https://web.engr.oregonstate.edu/~perezalj/Benny/Beaver" alt="Benny">
 				<img class ="bennyPicture rightPicture"  src="https://web.engr.oregonstate.edu/~perezalj/Benny/Beaver" alt="Benny">
 			<div class ="option-container-block">
 				<div class="option-container">
@@ -84,8 +68,4 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		</main>
-	</body>
-
-</html>
+{{/if}}
