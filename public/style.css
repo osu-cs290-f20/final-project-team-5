@@ -1,10 +1,32 @@
+/* Center the header*/
 h1 {
-  margin-left: 130px;
+  display: flex;
+  justify-content: center;
 }
 
 a {
   text-decoration: none;
   color: black;
+}
+
+/* Size of input box*/
+#players {
+  width: 50px;
+  margin-left: 75px;
+}
+
+/*Always show arrows in input text box*/
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+
+}
+
+/* Center Game Pal container*/
+.option-container-block {
+  display: flex;
+  justify-content: center;
 }
 
 .option-container {
@@ -15,18 +37,37 @@ a {
   grid-column-gap: 150px;
   max-width: 500;
   max-height: 600;
+  background: rgb(199, 235, 222); /* Model background color
+                                    subject to change */             
 }
 
 .color-option-buttons {
   margin-left: 25px;
 }
 
+
+.color-header {
+  margin-left: 6px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+.game-option-title {
+  margin-left: 5px;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
 .accept-button {
   max-width: 100px;
   max-height: 40px;
   display: absolute;
-  bottom: 30 px;
+  margin-bottom: 30px;
   margin-top: 50px;
+  margin-left: 50px;
 }
 
 .game-option-name {
@@ -36,8 +77,10 @@ a {
   text-align: center;
 }
 
-.radio-buttons {}
-
+.radio-buttons {
+  width: 100px;
+  margin-left: 50px;
+}
 
 .radio-yes {
   display: inline-block;
@@ -45,19 +88,14 @@ a {
 
 .radio-no {
   display: inline-block;
-
 }
 
-
-/*
- * // Changes here - Dylan
- * // Tried reverting it back to how @Forrest did it, but couldn't get it to work.
- * // Please change back.
- * I think it should work now
- */
+/* Added border to color buttons so
+  you can see the colors more easily
+  */
 .color-button {
   padding: 0;
-  border: none;
+  border: 2px solid black;
   width: 50px;
   height: 50px;
   margin-top: 10px;
