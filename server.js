@@ -26,7 +26,7 @@ res.status(200).render('gamePal', {optionsPage: true});
 /*The next one is going to be the game with our choices. 
 Maybe I can parameterize the url? This will take some finagling*/
 app.get('/gameBuddy', function(req, res, next){
-  res.status(200).render('gamePal', {optionsPage: false, optionsPage: false});
+  res.status(200).render('gamePal', {optionsPage: false});
 });
 
 app.get('*', function(req, res){
