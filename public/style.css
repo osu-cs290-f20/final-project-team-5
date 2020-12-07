@@ -33,6 +33,8 @@ input[type=number]::-webkit-outer-spin-button {
     border-color: orangered;
     background-color: lightgray;
     position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .bennyPicture{
@@ -41,14 +43,22 @@ input[type=number]::-webkit-outer-spin-button {
     position: absolute;
 }
 
-.leftPicture{
+.bennyPicture.leftPicture{
+  /*
     left: 62.5px;
     top: 187.5px;
-}
+    */
+    left: 180px;
+    top: 350px;
 
-.rightPicture{
+}
+.bennyPicture.rightPicture{
+  /*
     right: 62.5px;
     top: 187.5px;
+    */
+    left: 1420px;
+    top: 350px;
 }
 /* Center Game Pal container*/
 .option-container-block {
@@ -60,7 +70,7 @@ input[type=number]::-webkit-outer-spin-button {
   border-style: solid;
   border-width: 10px;
   display: grid;
-  grid-template-columns: 20px 330px;
+  grid-template-columns: 20px 330px; /*330*/
   grid-column-gap: 150px;
   max-width: 500;
   max-height: 600;

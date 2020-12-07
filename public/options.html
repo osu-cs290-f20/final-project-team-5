@@ -10,7 +10,7 @@
 	<body>
 		<header>
 			<h1 class="site-title"><a href="#">Game Pal for Buds</a></h1>
-			<script src="options.js" charset="utf-8" defer></script>
+			<script src="index.js" charset="utf-8" defer></script> <!--On click button-->
 		</header>
 
 		<main>
@@ -43,11 +43,11 @@
 							<p class="game-option-name">Timer</p>
 							<div class="radio-buttons">
 								<div class="radio-yes">
-									<input type="radio" id="points-yes" name="Points" value="yes">
+									<input type="radio" id="timer-yes" name="Timer" value="yes" checked="checked"> <!--On by default-->
 									<label for="points-yes">Yes</label>
 								</div>
 								<div class="radio-no">
-									<input type="radio" id="points-no" name="Points" value="no">
+									<input type="radio" id="timer-no" name="Timer" value="no">
 									<label for="points-no">No</label>
 								</div>
 							</div>
@@ -57,11 +57,11 @@
 							<p class="game-option-name">Point Counter</p>
 							<div class="radio-buttons">
 								<div class="radio-yes">
-									<input type="radio" id="timer-yes" name="Timer" value="yes">
+									<input type="radio" id="points-yes" name="Points" value="yes" checked="checked"> <!--On by default-->
 									<label for="timer-yes">Yes</label>
 								</div>
 								<div class="radio-no">
-									<input type="radio" id="timer-no" name="Timer" value="no">
+									<input type="radio" id="points-no" name="Points" value="no">
 									<label for="timer-no">No</label>
 								</div>
 							</div>
@@ -71,16 +71,16 @@
 							<p class="game-option-name">Dice</p>
 							<div class="radio-buttons">
 								<div class="radio-yes">
-									<input type="radio" id="dice-yes" name="Dice" value="yes">
+									<input type="radio" id="dice-yes" name="Dice" value="yes" checked="checked"> <!--On by default-->
 									<label for="dice-yes">Yes</label>
 								</div>
 								<div class="radio-no">
 									<input type="radio" id="dice-no" name="Dice" value="no">
 									<label for="dice-no">No</label>
 								</div>
-							</div>
-
-						<button class="accept-button">Confirm Options</button>
+							</div>	
+						</div>
+					<button class="accept-button">Confirm Options</button>
 					</div>
 				</div>
 			</div>
