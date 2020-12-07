@@ -10,6 +10,10 @@ let ptCounter;
 let gameDice;
 let styleColor;
 
+// set default color choice
+document.querySelector('.color-button.green').style.border = '5px solid white';
+styleColor = 'green';
+
 // used to test functions on click of any button
 colorButtons.addEventListener('click', function (event) {
     let target = event.target;
@@ -22,11 +26,6 @@ colorButtons.addEventListener('click', function (event) {
     target.style.border = '5px solid white';
     styleColor = target.textContent;
 });
-
-let players = document.
-    confirmOptions.addEventListener('click', function (event) {
-
-    });
 
 /*
 * Confirm Button
@@ -64,20 +63,21 @@ confirmButton.addEventListener('click', function (event) {
     //Not sure about style...
     // idk, just thinking about how to deal with color choice
     switch (styleColor) {
-        case green:
+        case 'green':
             break;
-        case blue:
+        case 'blue':
             break;
-        case yellow:
+        case 'yellow':
             break;
-        case black:
+        case 'black':
             break;
-        case white:
+        case 'white':
             break;
-        case purple:
+        case 'purple':
             break;
 
         default:
             break;
     }
+    console.log(styleColor);
 });
