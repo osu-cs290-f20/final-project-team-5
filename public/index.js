@@ -80,4 +80,9 @@ confirmButton.addEventListener('click', function (event) {
             break;
     }
     console.log(styleColor);
+
+    timer(/* float input for number of minutes */ 1, function (num) {
+        // num is number of seconds left in the timer
+        console.log('Time Left: ' + Math.floor(num / 60) + ':' + num % 60);
+    });
 });

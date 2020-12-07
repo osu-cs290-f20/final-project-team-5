@@ -4,15 +4,20 @@ function rollDie(sides) {
 }
 
 // starts a timer that counts down for the provided number of minutes
-function timer(min) {
+function timer(min, doThing) {
     let startTime = Date.now();
 
-    timerInterval = setInterval(startTimer, 1000);
-    timing = true;
+    let timerInterval = setInterval(startTimer, 1000);
 
     function startTimer() {
         let dateVar = new Date();
         let time = dateVar.getTime();
-        console.log(60 * min - Math.floor((time - startTime) / 1000));
+
+        timeLeft = Math.ceil(60 * min) - Math.floor((time - startTime) / 1000);
+
+        if (timeLeft === 0)
+            clearInterval(timerInterval);
+
+        doThing(timeLeft);
     }
 }
