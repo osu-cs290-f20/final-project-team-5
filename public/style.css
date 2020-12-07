@@ -69,12 +69,13 @@ input[type=number]::-webkit-outer-spin-button {
 .option-container {
   border-style: solid;
   border-width: 10px;
+  border-color: white;
   display: grid;
   grid-template-columns: 20px 330px; /*330*/
   grid-column-gap: 150px;
   max-width: 500;
   max-height: 600;
-  background: rgb(199, 235, 222); /* Model background color
+  background:rgb(255, 182, 45); /* Model background color
                                     subject to change */             
 }
 
