@@ -74,7 +74,7 @@ input[type=number]::-webkit-outer-spin-button {
   grid-column-gap: 150px;
   max-width: 500;
   max-height: 600;
-  background: rgb(199, 235, 222); /* Model background color
+  background:rgb(255, 182, 45); /* Model background color
                                     subject to change */             
 }
 
