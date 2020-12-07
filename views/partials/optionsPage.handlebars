@@ -1,71 +1,73 @@
 {{#if optionsPage}}
-<img class ="bennyPicture leftPicture"  src="https://web.engr.oregonstate.edu/~perezalj/Benny/Beaver" alt="Benny">
-				<img class ="bennyPicture rightPicture"  src="https://web.engr.oregonstate.edu/~perezalj/Benny/Beaver" alt="Benny">
-			<div class ="option-container-block">
-				<div class="option-container">
-					<div class="color-option-buttons">
-						<p class="color-header">Style</p>
+<img class="bennyPicture leftPicture" src="https://web.engr.oregonstate.edu/~perezalj/Benny/Beaver" alt="Benny">
+<img class="bennyPicture rightPicture" src="https://web.engr.oregonstate.edu/~perezalj/Benny/Beaver" alt="Benny">
+<div class="option-container-block">
+	<div class="option-container">
+		<div class="color-option-buttons">
+			<p class="color-header">Style</p>
 
-						<button class="color-button green">green</button>
-						<button class="color-button blue">blue</button>
-						<button class="color-button yellow">yellow</button>
-						<button class="color-button black">black</button>
-						<button class="color-button white">white</button>
-						<button class="color-button purple">purple</button>
+			<button class="color-button green">green</button>
+			<button class="color-button blue">blue</button>
+			<button class="color-button yellow">yellow</button>
+			<button class="color-button black">black</button>
+			<button class="color-button white">white</button>
+			<button class="color-button purple">purple</button>
+		</div>
+
+		<div class="game-option-buttons">
+			<p class="game-option-title">Select Your Options Here</p>
+			<div class="players">
+				<p class="game-option-name">Number Of Players</p>
+				<div class="number-player-input">
+					<input type="number" id="players" name="Players" step="1" min="1" max="4" value="1">
+					<!--Text box always shows a value of 1-->
+				</div>
+				<!--Range of players are between 1-4 (change range if more players)-->
+			</div>
+
+			<div class="points">
+				<p class="game-option-name">Timer</p>
+				<div class="radio-buttons">
+					<div class="radio-yes">
+						<input type="radio" id="points-yes" name="Points" value="yes">
+						<label for="points-yes">Yes</label>
 					</div>
-
-					<div class="game-option-buttons">
-						<p class="game-option-title">Select Your Options Here</p>
-						<div class="players">
-							<p class="game-option-name">Number Of Players</p>
-							<div class = "number-player-input">
-								<input type="number" id="players" name="Players" step="1" min="1" max="4" value="1">  <!--Text box always shows a value of 1-->
-							</div>																						<!--Range of players are between 1-4 (change range if more players)-->
-						</div>																							
-
-						<div class="points">
-							<p class="game-option-name">Timer</p>
-							<div class="radio-buttons">
-								<div class="radio-yes">
-									<input type="radio" id="points-yes" name="Points" value="yes">
-									<label for="points-yes">Yes</label>
-								</div>
-								<div class="radio-no">
-									<input type="radio" id="points-no" name="Points" value="no">
-									<label for="points-no">No</label>
-								</div>
-							</div>
-						</div>
-
-						<div class="timer">
-							<p class="game-option-name">Point Counter</p>
-							<div class="radio-buttons">
-								<div class="radio-yes">
-									<input type="radio" id="timer-yes" name="Timer" value="yes">
-									<label for="timer-yes">Yes</label>
-								</div>
-								<div class="radio-no">
-									<input type="radio" id="timer-no" name="Timer" value="no">
-									<label for="timer-no">No</label>
-								</div>
-							</div>
-						</div>
-
-						<div class="dice">
-							<p class="game-option-name">Dice</p>
-							<div class="radio-buttons">
-								<div class="radio-yes">
-									<input type="radio" id="dice-yes" name="Dice" value="yes">
-									<label for="dice-yes">Yes</label>
-								</div>
-								<div class="radio-no">
-									<input type="radio" id="dice-no" name="Dice" value="no">
-									<label for="dice-no">No</label>
-								</div>
-							</div>
-
-						<button class="accept-button">Confirm Options</button>
+					<div class="radio-no">
+						<input type="radio" id="points-no" name="Points" value="no">
+						<label for="points-no">No</label>
 					</div>
 				</div>
 			</div>
-{{/if}}
+
+			<div class="timer">
+				<p class="game-option-name">Point Counter</p>
+				<div class="radio-buttons">
+					<div class="radio-yes">
+						<input type="radio" id="timer-yes" name="Timer" value="yes">
+						<label for="timer-yes">Yes</label>
+					</div>
+					<div class="radio-no">
+						<input type="radio" id="timer-no" name="Timer" value="no">
+						<label for="timer-no">No</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="dice">
+				<p class="game-option-name">Dice</p>
+				<div class="radio-buttons">
+					<div class="radio-yes">
+						<input type="radio" id="dice-yes" name="Dice" value="yes">
+						<label for="dice-yes">Yes</label>
+					</div>
+					<div class="radio-no">
+						<input type="radio" id="dice-no" name="Dice" value="no">
+						<label for="dice-no">No</label>
+					</div>
+				</div>
+
+				<button class="accept-button">Confirm Options</button>
+			</div>
+		</div>
+	</div>
+	{{/if}}
