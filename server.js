@@ -13,7 +13,7 @@ var expressHandlebars = require('express-handlebars');
 var app = express();
 var port = process.env.PORT || 8000;
 
-app.engine('handlebars', expressHandlebars({ defaultLayout: 'Main'}));
+app.engine('handlebars', expressHandlebars({ defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 app.use(express.static('public'));
