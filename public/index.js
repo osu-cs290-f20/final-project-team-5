@@ -1,5 +1,8 @@
 let colorButtons = document.querySelector('div.color-option-buttons');
 
+//Location of option container
+
+let optionContainer = document.getElementsByClassName('option-container');
 // Location of Confirm Button
 let confirmButton = document.querySelector('button.accept-button');
 
@@ -14,10 +17,13 @@ let styleColor;
 document.querySelector('.color-button.green').style.border = '5px solid white';
 styleColor = 'green';
 
+
 // used to test functions on click of any button
 colorButtons.addEventListener('click', function (event) {
     let target = event.target;
     let buttons = event.currentTarget.childNodes;
+	//You had a nice flow going - I'm not sure if this breaks it.
+	let currentColor = optionContainer[0].classList[1];
 
     for (let i = 3; i < buttons.length; i += 2) {
         if (buttons[i].style.border = '5px solid white')
@@ -25,6 +31,10 @@ colorButtons.addEventListener('click', function (event) {
     }
     target.style.border = '5px solid white';
     styleColor = target.textContent;
+	optionContainer[0].classList.remove(currentColor);
+	optionContainer[0].classList.add(styleColor);
+	console.log("==currentColor", currentColor);
+	console.log("==target.textContent", target.textContent);
 });
 
 /*

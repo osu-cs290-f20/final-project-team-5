@@ -36,7 +36,31 @@ input[type=number]::-webkit-outer-spin-button {
     margin-left: auto;
     margin-right: auto;
 }
+/*Background color styles*/
+.orange{
+    background:rgb(255, 182, 45); /* Model background color
+                                    subject to change */ 
+}
 
+.green{
+  background: green;
+}
+
+.yellow{
+  background: yellow;
+}
+
+.purple{
+  background: purple;
+}
+
+.blue{
+  background: blue;
+}
+
+.red{
+  background: red;
+}
 .bennyPicture{
     max-width: 15%;
     max-height: 15%;
@@ -74,9 +98,7 @@ input[type=number]::-webkit-outer-spin-button {
   grid-template-columns: 20px 330px; /*330*/
   grid-column-gap: 150px;
   max-width: 500;
-  max-height: 600;
-  background:rgb(255, 182, 45); /* Model background color
-                                    subject to change */             
+  max-height: 600;            
 }
 
 .color-option-buttons {
@@ -145,34 +167,31 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .color-button.purple {
-  background-color: purple;
   color: purple;
 }
 
-.color-button.white {
-  background-color: white;
-  color: white;
+.color-button.red {
+  color: red;
 }
 
-.color-button.black {
-  background-color: black;
-  color: black;
+.color-button.orange
+{
+  color: rgb(255, 182, 45); /* Model background color
+                                    subject to change */ ;
 }
 
 .color-button.blue {
-  background-color: blue;
   color: blue;
 }
 
 .color-button.yellow {
-  background-color: yellow;
   color: yellow;
 }
 
 .color-button.green {
-  background-color: green;
   color: green;
 }
+
 
 
 /* this is for the orange border surrounding the whole game */
