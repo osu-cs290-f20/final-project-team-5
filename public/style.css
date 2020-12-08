@@ -99,6 +99,11 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 18px;
 }
 
+.playerInfo {
+  margin-top: 5%;
+  margin-left: 13%;
+}
+
 .accept-button {
   max-width: 100px;
   max-height: 40px;
@@ -382,4 +387,69 @@ input[type=number]::-webkit-outer-spin-button {
     position: absolute;
     right:780px;
     bottom: 400px;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: rgb(254, 254, 254); /* White w/ Opacity */
+  margin: auto;
+  padding: 20px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: black;
+  width: 20%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 150%;
+  text-decoration: underline;
+}
+
+.person {
+  font-weight: bold;
+}
+
+.player-input-user {
+  padding-left: 12px;
+}
+
+.player-input-url {
+  padding-top: 10px;
+}
+
+#submitBtn {
+  margin-top: 10%;
+  margin-left: 42%;
 }

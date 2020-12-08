@@ -86,3 +86,48 @@ confirmButton.addEventListener('click', function (event) {
         console.log('Time Left: ' + Math.floor(num / 60) + ':' + num % 60);
     });
 });
+
+
+
+
+/*
+* Javascript written for the modal in options.html
+* Player Info
+    *** Still working on but feel free to edit... or trash it.***
+*/
+
+// Modal
+var modal = document.getElementById("myModal");
+
+// Player Info Button
+var btn = document.querySelector("button.playerInfo");
+
+// Submit Button
+var submitInfo = document.getElementById("submitBtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+    console.log("==entered here");
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, give alert
+window.onclick = function(event) {
+    if (event.target == modal) {
+        alert("Please Fill Out");
+    }
+}
+
+// Store Username and URL's here!!!
+submitInfo.onclick = function() {
+
+    modal.style.display = "none";
+    console.log("==test here");
+}
