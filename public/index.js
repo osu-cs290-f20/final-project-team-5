@@ -12,18 +12,18 @@ let toggleTimer;
 let ptCounter;
 let gameDice;
 let styleColor;
+let currentColor = optionContainer[0].classList[1];
 
 // set default color choice
-document.querySelector('.color-button.green').style.border = '5px solid white';
-styleColor = 'green';
+document.querySelector('.color-button.orange').style.border = '5px solid white';
+styleColor = 'orange';
 
 
 // used to test functions on click of any button
 colorButtons.addEventListener('click', function (event) {
     let target = event.target;
     let buttons = event.currentTarget.childNodes;
-	//You had a nice flow going - I'm not sure if this breaks it.
-	let currentColor = optionContainer[0].classList[1];
+
 
     for (let i = 3; i < buttons.length; i += 2) {
         if (buttons[i].style.border = '5px solid white')
@@ -33,8 +33,8 @@ colorButtons.addEventListener('click', function (event) {
     styleColor = target.textContent;
 	optionContainer[0].classList.remove(currentColor);
 	optionContainer[0].classList.add(styleColor);
-	console.log("==currentColor", currentColor);
-	console.log("==target.textContent", target.textContent);
+	currentColor = styleColor;
+
 });
 
 /*
@@ -72,16 +72,16 @@ confirmButton.addEventListener('click', function (event) {
 
     //Not sure about style...
     // idk, just thinking about how to deal with color choice
-    switch (styleColor) {
+    switch (currentColor) {
         case 'green':
             break;
         case 'blue':
             break;
         case 'yellow':
             break;
-        case 'black':
+        case 'orange':
             break;
-        case 'white':
+        case 'red':
             break;
         case 'purple':
             break;
@@ -89,7 +89,11 @@ confirmButton.addEventListener('click', function (event) {
         default:
             break;
     }
-    console.log(styleColor);
+    console.log(toggleTimer);
+	console.log(ptCounter);
+	console.log(gameDice);
+	console.log("hi");
+	console.log(JSON.stringify({players: numPlayers, timer: toggleTimer, points: ptCounter, color: currentColor, dice: gameDice}));
 
     timer(/* float input for number of minutes */ 1, function (num) {
         // num is number of seconds left in the timer
