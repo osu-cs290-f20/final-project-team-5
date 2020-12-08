@@ -13,7 +13,7 @@ function sendDataToDB() {
     request.setRequestHeader('Content-Type', 'application/json');
     request.addEventListener('load', function (event) {
         if (event.target.status === 200) {
-            // send data
+            // implement data client-side            
         }
         else
             alert('Error sending data to server: ' + event.target.response);
