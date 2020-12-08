@@ -70,31 +70,13 @@ confirmButton.addEventListener('click', function (event) {
         gameDice = document.getElementById("dice-no").value;
     }
 
-    //Not sure about style...
-    // idk, just thinking about how to deal with color choice
-    switch (currentColor) {
-        case 'green':
-            break;
-        case 'blue':
-            break;
-        case 'yellow':
-            break;
-        case 'orange':
-            break;
-        case 'red':
-            break;
-        case 'purple':
-            break;
 
-        default:
-            break;
-    }
-    console.log(toggleTimer);
-	console.log(ptCounter);
-	console.log(gameDice);
-	console.log("hi");
-	console.log(JSON.stringify({players: numPlayers, timer: toggleTimer, points: ptCounter, color: currentColor, dice: gameDice}));
-
+    document.cookie = "players=" + numPlayers + " expires=Thu, 10 Dec 2020 12:00:00 UTC; path =/";
+    document.cookie = "timer=" + toggleTimer + " expires=Thu, 10 Dec 2020 12:00:00 UTC; path =/";
+    document.cookie = "points=" + ptCounter + " expires=Thu, 10 Dec 2020 12:00:00 UTC; path =/";
+    document.cookie = "dice=" + gameDice + " expires=Thu, 10 Dec 2020 12:00:00 UTC; path =/";
+	document.cookie = "color=" + currentColor + " expires=Thu, 10 Dec 2020 12:00:00 UTC; path =/";
+	
     timer(/* float input for number of minutes */ 1, function (num) {
         // num is number of seconds left in the timer
         console.log('Time Left: ' + Math.floor(num / 60) + ':' + num % 60);
