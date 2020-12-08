@@ -70,7 +70,20 @@ confirmButton.addEventListener('click', function (event) {
 
     // Store Number of players
     numPlayers = document.getElementById("players").value;
-
+	//Switch wouldn't work for some reason.
+    if(numPlayers == 1){
+		numPlayers = "one";
+	}
+	if(numPlayers == 2){
+		numPlayers = "two";
+	}
+	if(numPlayers == 3){
+		numPlayers = "three";
+	}
+	if(numPlayers == 4){
+		numPlayers = "four";
+	}
+	
     // Check if timer on or off
     if (document.getElementById("timer-yes").checked) {
         toggleTimer = document.getElementById("timer-yes").value;
@@ -94,14 +107,14 @@ confirmButton.addEventListener('click', function (event) {
     else if (document.getElementById("dice-no").checked) {
         gameDice = document.getElementById("dice-no").value;
     }
-
-
-    document.cookie = "players=" + numPlayers + " expires=Thu, 10 Dec 2020 12:00:00 UTC; path =/";
+    
+    console.log(numPlayers);
+    document.cookie = "numPlayers=" + numPlayers + " expires=Thu, 10 Dec 2020 12:00:00 UTC; path =/";
     document.cookie = "timer=" + toggleTimer + " expires=Thu, 10 Dec 2020 12:00:00 UTC; path =/";
     document.cookie = "points=" + ptCounter + " expires=Thu, 10 Dec 2020 12:00:00 UTC; path =/";
-    document.cookie = "dice=" + gameDice + " expires=Thu, 10 Dec 2020 12:00:00 UTC; path =/";
-    document.cookie = "color=" + currentColor + " expires=Thu, 10 Dec 2020 12:00:00 UTC; path =/";
-
+    document.cookie = "gameDice=" + gameDice + " expires=Thu, 10 Dec 2020 12:00:00 UTC; path =/";
+	document.cookie = "color=" + currentColor + " expires=Thu, 10 Dec 2020 12:00:00 UTC; path =/";
+	
     timer(/* float input for number of minutes */ 1, function (num) {
         // num is number of seconds left in the timer
         console.log('Time Left: ' + Math.floor(num / 60) + ':' + num % 60);
