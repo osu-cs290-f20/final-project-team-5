@@ -33,6 +33,7 @@ Maybe I can parameterize the url? This will take some finagling*/
 app.get('/gameBuddy', function (req, res, next) {
   console.log("==This is where you think it is");
   console.log("==req.cookies:", req.cookies);
+  
   let numPlayers = req.cookies['players'].split(' ')[0];
   let color = req.cookies['color'].split(' ')[0];
   let timer = false;
