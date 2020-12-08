@@ -1,3 +1,28 @@
+// testing server requests
+function sendDataToDB() {
+    let request = new XMLHttpRequest();
+
+    let reqURL = '/sendData';
+    request.open('POST', reqURL);
+
+    let reqBody = JSON.stringify({
+        stuff1: "I'm stuff1",
+        stuff2: "Whaddup, I'm stuuf2"
+    });
+
+    request.setRequestHeader('Content-Type', 'application/json');
+    request.addEventListener('load', function (event) {
+        if (event.target.status === 200) {
+            // implement data client-side            
+        }
+        else
+            alert('Error sending data to server: ' + event.target.response);
+    });
+
+    request.send(reqBody);
+}
+
+
 let colorButtons = document.querySelector('div.color-option-buttons');
 
 //Location of option container
@@ -31,9 +56,9 @@ colorButtons.addEventListener('click', function (event) {
     }
     target.style.border = '5px solid white';
     styleColor = target.textContent;
-	optionContainer[0].classList.remove(currentColor);
-	optionContainer[0].classList.add(styleColor);
-	currentColor = styleColor;
+    optionContainer[0].classList.remove(currentColor);
+    optionContainer[0].classList.add(styleColor);
+    currentColor = styleColor;
 
 });
 
@@ -117,25 +142,25 @@ var submitInfo = document.getElementById("submitBtn");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-btn.onclick = function() {
+btn.onclick = function () {
     modal.style.display = "block";
     console.log("==entered here");
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+span.onclick = function () {
     modal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, give alert
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == modal) {
         alert("Please Fill Out");
     }
 }
 
 // Store Username and URL's here!!!
-submitInfo.onclick = function() {
+submitInfo.onclick = function () {
 
     modal.style.display = "none";
     console.log("==test here");
