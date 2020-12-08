@@ -277,10 +277,13 @@ input[type=number]::-webkit-outer-spin-button {
 /*down button*/
 .deductPointsButton
 {
+    position: absolute;
     height: 30px;
     width:50px;
     margin-left: 20%;
     margin-top: -13%;
+    right: 150px;
+    top: 240px;
 }
 /*these next css elements control the positioning of individual player cards, idk who did this but good job mate!*/
 #playerOne{
