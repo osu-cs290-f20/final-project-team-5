@@ -115,10 +115,10 @@ confirmButton.addEventListener('click', function (event) {
     document.cookie = "gameDice=" + gameDice + " expires=Thu, 10 Dec 2020 12:00:00 UTC; path =/";
 	document.cookie = "color=" + currentColor + " expires=Thu, 10 Dec 2020 12:00:00 UTC; path =/";
 	
-    timer(/* float input for number of minutes */ 1, function (num) {
-        // num is number of seconds left in the timer
-        console.log('Time Left: ' + Math.floor(num / 60) + ':' + num % 60);
-    });
+    // timer(/* float input for number of minutes */ 1, function (num) {
+    //     // num is number of seconds left in the timer
+    //     console.log('Time Left: ' + Math.floor(num / 60) + ':' + num % 60);
+    // });
 });
 
 

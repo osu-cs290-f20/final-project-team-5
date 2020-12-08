@@ -22,6 +22,7 @@
 					<!--Text box always shows a value of 1-->
 				</div>
 				<!--Range of players are between 1-4 (change range if more players)-->
+				<button class="playerInfo">Enter Player Info</button>
 			</div>
 
 			<div class="points">
@@ -66,6 +67,69 @@
 				</div>
 
 				<button class="accept-button">Confirm Options</button>
+
+				<!-- The Modal -->
+				<div id="myModal" class="modal">
+
+					<!-- Modal content -->
+					<div class="modal-content">
+						<span class="close">&times;</span>
+						<p class="modalHeader">Player Info</p>
+
+						<!-- Could possibly break up into handlebar depending on how many players are selected. -->
+						<!--Placeholder for now-->
+						<section id="infoPlayers">
+							<div class="num-player">
+								<p class="person">Player 1</p>
+								<div class="player-input-user">
+									<label for="username">Username: </label>
+									<input type="text" id="username"></input>
+								</div>
+								<div class="player-input-url">
+									<label for="pictureURL">Avatar URL:</label>
+									<input type="text" id="pictureURL"></input>
+								</div>
+								</class>
+
+								<div class="num-player">
+									<p class="person">Player 2</p>
+									<div class="player-input-user">
+										<label for="username">Username: </label>
+										<input type="text" id="username"></input>
+									</div>
+									<div class="player-input-url">
+										<label for="pictureURL">Avatar URL:</label>
+										<input type="text" id="pictureURL"></input>
+									</div>
+									</class>
+
+									<div class="num-player">
+										<p class="person">Player 3</p>
+										<div class="player-input-user">
+											<label for="username">Username: </label>
+											<input type="text" id="username"></input>
+										</div>
+										<div class="player-input-url">
+											<label for="pictureURL">Avatar URL:</label>
+											<input type="text" id="pictureURL"></input>
+										</div>
+										</class>
+
+										<div class="num-player">
+											<p class="person">Player 4</p>
+											<div class="player-input-user">
+												<label for="username">Username: </label>
+												<input type="text" id="username"></input>
+											</div>
+											<div class="player-input-url">
+												<label for="pictureURL">Avatar URL:</label>
+												<input type="text" id="pictureURL"></input>
+											</div>
+											</class>
+						</section>
+						<button id="submitBtn">Submit</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
