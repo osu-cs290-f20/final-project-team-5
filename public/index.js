@@ -81,7 +81,7 @@ confirmButton.addEventListener('click', function (event) {
         numPlayers = "four";
     }
     console.log(numPlayers);
-    
+
     // Check if timer on or off
     let timerRadio = document.querySelector('input[name="Timer"]:checked');
     if (timerRadio.value === 'yes')
@@ -140,10 +140,29 @@ var btn = document.querySelector("button.playerInfo");
 // Submit Button
 var submitInfo = document.getElementById("submitBtn");
 
+// Close button
 var span = document.getElementsByClassName("close")[0];
+
+// Array that store given usernames in the same index as urls
+var givenUsernames = [];
+
+// Array that stores given urls in the same index as usernames
+var givenURLs = [];
 
 // When the user clicks the button, open the modal 
 btn.onclick = function () {
+
+    //Clear input boxes before opening modal
+    for(var i = 0; i < 4; i++){
+        username[i].value = "";
+        pictureURL[i].value = "";
+    }
+
+    // Clear arrays in case users want to re-enter usernames and images
+    // In case user also wants to change amount of players entered
+    givenUsernames = [];
+    givenURLs = [];
+
     modal.style.display = "block";
     console.log("==entered here");
 }
@@ -162,11 +181,33 @@ window.onclick = function (event) {
 
 // Store Username and URL's here!!!
 submitInfo.onclick = function () {
-    console.log(username[0].value);
-    console.log(username[1].value);
-    console.log(username[2].value);
-    console.log(username[3].value);
+    //Check for at least one input
+    if(username[0].value == "" || username[0].value == null) 
+        alert("Please fill in.");
+    else{
+    //Grab current amount of players entered + turn into int
+        var checker = parseInt(document.getElementById("players").value);
 
-    modal.style.display = "none";
-    console.log("==test here");
+        //Check value
+        console.log(checker);
+
+        // Check to see if empty array
+        if(givenUsernames.length == 0 || givenUsernames === undefined){
+
+            // Loops depending on how many players the user has inputted
+            for(var i = 0; i < checker; i++){
+
+                // Push into array!
+                givenUsernames.push(username[i].value);
+                givenURLs.push(pictureURL[i].value);
+
+            }
+        }
+
+        console.log(givenUsernames);
+        console.log(givenURLs);
+
+        modal.style.display = "none";
+        console.log("==test here");
+    }
 }
