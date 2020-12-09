@@ -1,14 +1,11 @@
 // testing server requests
-function sendDataToDB() {
+function sendDataToDB(sendData) {
     let request = new XMLHttpRequest();
 
     let reqURL = '/sendData';
     request.open('POST', reqURL);
 
-    let reqBody = JSON.stringify({
-        stuff1: "I'm stuff1",
-        stuff2: "Whaddup, I'm stuuf2"
-    });
+    let reqBody = JSON.stringify(sendData);
 
     request.setRequestHeader('Content-Type', 'application/json');
     request.addEventListener('load', function (event) {
@@ -70,27 +67,29 @@ confirmButton.addEventListener('click', function (event) {
 
     // Store Number of players
     numPlayers = document.getElementById("players").value;
-	//Switch wouldn't work for some reason.
-    if(numPlayers == 1){
-		numPlayers = "one";
-	}
-	if(numPlayers == 2){
-		numPlayers = "two";
-	}
-	if(numPlayers == 3){
-		numPlayers = "three";
-	}
-	if(numPlayers == 4){
-		numPlayers = "four";
-	}
-	
+    //Switch wouldn't work for some reason.
+    if (numPlayers == 1) {
+        numPlayers = "one";
+    }
+    if (numPlayers == 2) {
+        numPlayers = "two";
+    }
+    if (numPlayers == 3) {
+        numPlayers = "three";
+    }
+    if (numPlayers == 4) {
+        numPlayers = "four";
+    }
+
     // Check if timer on or off
-    if (document.getElementById("timer-yes").checked) {
-        toggleTimer = document.getElementById("timer-yes").value;
-    }
-    else if (document.getElementById("timer-no").checked) {
-        toggleTimer = document.getElementById("timer-no").value;
-    }
+    let timerRadio = document.querySelector('input[name="Timer"]:checked');
+    if (timerRadio.value === 'yes')
+        toggleTimer = true;
+    else
+        toggleTimer = false;
+    console.log(timerRadio);
+    console.log(toggleTimer);
+
 
     // Check if point counter on or off
     if (document.getElementById("points-yes").checked) {
@@ -101,20 +100,21 @@ confirmButton.addEventListener('click', function (event) {
     }
 
     // Check if dice counter on or off
+
     if (document.getElementById("dice-yes").checked) {
         gameDice = document.getElementById("dice-yes").value;
     }
     else if (document.getElementById("dice-no").checked) {
         gameDice = document.getElementById("dice-no").value;
     }
-    
-    console.log(numPlayers);
-    document.cookie = "numPlayers=" + numPlayers + " expires=Thu, 10 Dec 2020 12:00:00 UTC; path =/";
-    document.cookie = "timer=" + toggleTimer + " expires=Thu, 10 Dec 2020 12:00:00 UTC; path =/";
-    document.cookie = "points=" + ptCounter + " expires=Thu, 10 Dec 2020 12:00:00 UTC; path =/";
-    document.cookie = "gameDice=" + gameDice + " expires=Thu, 10 Dec 2020 12:00:00 UTC; path =/";
-	document.cookie = "color=" + currentColor + " expires=Thu, 10 Dec 2020 12:00:00 UTC; path =/";
-	
+
+    let pageData = {
+        players: numPlayers,
+        timer: toggleTimer,
+        points: null,
+        dice: null,
+        color: styleColor
+    };
     // timer(/* float input for number of minutes */ 1, function (num) {
     //     // num is number of seconds left in the timer
     //     console.log('Time Left: ' + Math.floor(num / 60) + ':' + num % 60);
