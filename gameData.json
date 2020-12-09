@@ -2,17 +2,17 @@
   "optionsPage": false,
   "gameDice": true,
   "options": {
-    "players": "4",
-    "timer": true,
-    "points": true,
-    "dice": true,
+    "players": "1",
+    "timer": false,
+    "points": false,
+    "dice": false,
     "color": "orange"
   },
   "users": [
     {
       "playerNumber": 0,
-      "name": "Frost",
-      "url": "Hell"
+      "name": "Dylan",
+      "url": "Hi"
     },
     {
       "playerNumber": 1,

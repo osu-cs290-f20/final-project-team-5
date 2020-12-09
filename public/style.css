@@ -8,6 +8,8 @@ a {
   text-decoration: none;
   color: rgb(215,63, 9);
   text-shadow: 2px 2px black;
+  font-size: 50px;
+
 }
 
 /* Size of input box*/
@@ -16,12 +18,27 @@ a {
   margin-left: 75px;
 }
 
+/*Line under header*/
+hr {
+  width: 550px;
+  margin-bottom: 50px;
+  border-color: rgb(215,63, 9);
+}
+
+body {
+  background-color: rgb(41, 41, 41);
+}
+
 /*Always show arrows in input text box*/
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button {  
 
    opacity: 1;
 
+}
+
+fieldset {
+  border: 0;
 }
 
 /*Stuff for the header and surrounding box*/
@@ -145,7 +162,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .radio-buttons {
   width: 100px;
-  margin-left: 50px;
+  margin-left: 42px;
 }
 
 .radio-yes {
