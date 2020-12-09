@@ -50,7 +50,7 @@ colorButtons.addEventListener('click', function (event) {
         if (buttons[i].style.border = '5px solid white')
             buttons[i].style.border = '2px solid black';
     }
-	currentColor = optionContainer[0].classList[1];
+    currentColor = optionContainer[0].classList[1];
     target.style.border = '5px solid white';
     styleColor = target.textContent;
     optionContainer[0].classList.remove(currentColor);
@@ -150,9 +150,6 @@ submitInfo.onclick = function () {
 
         checkPlayerInfo = true;
 
-        console.log(givenUsernames);
-        console.log(givenURLs);
-
         modal.style.display = "none";
         console.log("==test here");
     }
@@ -205,7 +202,7 @@ confirmButton.addEventListener('click', function (event) {
             gameDice = false;
 
         let optionData = {
-            players: numPlayers,
+            players: numPlayersTxt,
             timer: toggleTimer,
             points: ptCounter,
             dice: gameDice,
@@ -214,9 +211,11 @@ confirmButton.addEventListener('click', function (event) {
 
         let userData = [];
 
+        let txtNums = ['One', 'Two', 'Three', 'Four'];
+
         for (let i = 0; i < givenUsernames.length; i++) {
             let user = {
-                playerNumber: i,
+                playerNumber: txtNums[i],
                 name: givenUsernames[i],
                 url: givenURLs[i]
             }
@@ -226,8 +225,10 @@ confirmButton.addEventListener('click', function (event) {
             options: optionData,
             users: userData
         }
+        console.log(pageData);
         sendDataToDB(pageData);
-        window.location = "gameBuddy";
+        // window.location = "gameBuddy";
+        
         // timer(/* float input for number of minutes */ 1, function (num) {
         //     // num is number of seconds left in the timer
         //     console.log('Time Left: ' + Math.floor(num / 60) + ':' + num % 60);

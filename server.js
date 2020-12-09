@@ -74,6 +74,7 @@ app.post('/sendData', function (req, res, next) {
   console.log('== req.body:', req.body);
   let serverData = true;
   if (req.body) {
+    console.log(req.body);
     if (serverData) {
       fs.writeFile(
         __dirname + '/gameData.json',

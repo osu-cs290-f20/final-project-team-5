@@ -1,26 +1,15 @@
 {
   "options": {
-    "players": "3",
-    "timer": false,
-    "points": false,
-    "dice": false,
+    "timer": true,
+    "points": true,
+    "dice": true,
     "color": "orange"
   },
   "users": [
     {
-      "playerNumber": 0,
-      "name": "Dylan",
-      "url": "Hi"
-    },
-    {
-      "playerNumber": 1,
-      "name": "Test",
-      "url": "One"
-    },
-    {
-      "playerNumber": 2,
-      "name": "Two",
-      "url": "Three"
+      "playerNumber": "One",
+      "name": "Frost",
+      "url": "654"
     }
   ]
 }
