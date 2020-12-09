@@ -1,0 +1,31 @@
+{
+  "options": {
+    "players": "4",
+    "timer": true,
+    "points": true,
+    "dice": true,
+    "color": "orange"
+  },
+  "users": [
+    {
+      "playerNumber": 0,
+      "name": "Frost",
+      "url": "Hell"
+    },
+    {
+      "playerNumber": 1,
+      "name": "",
+      "url": ""
+    },
+    {
+      "playerNumber": 2,
+      "name": "",
+      "url": ""
+    },
+    {
+      "playerNumber": 3,
+      "name": "",
+      "url": ""
+    }
+  ]
+}

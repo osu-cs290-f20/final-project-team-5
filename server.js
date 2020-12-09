@@ -5,12 +5,14 @@
 *
 *
 */
-//var fs = require('fs');
+var fs = require('fs');
 var path = require('path');
 var express = require('express');
 var expressHandlebars = require('express-handlebars');
-var cookieParser = require('cookie-parser');
-const { json } = require('express');
+// var cookieParser = require('cookie-parser');
+// const { json } = require('express');
+let gameData = require('./gameData.json')
+
 var app = express();
 var port = process.env.PORT || 8000;
 
@@ -20,7 +22,7 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 
 app.use(express.static('public'));
-app.use(cookieParser());
+// app.use(cookieParser());
 
 
 app.get('/', function (req, res, next) {
@@ -31,22 +33,22 @@ app.get('/', function (req, res, next) {
 
 app.get('/gameBuddy', function (req, res, next) {
   var myArray = [
-  {
-	  playerNumber: "One", 
-	  name: "Player 1", 
-	  url: "https://web.engr.oregonstate.edu/~perezalj/Benny/Beaver", 
-	  points: true, 
-	  color: "orange"
-  },
-  {
-	  playerNumber: "Two", 
-	  name: "So mean :(", 
-	  url: "https://web.engr.oregonstate.edu/~perezalj/Benny/Beaver", 
-	  points: true, 
-	  color: "blue"
-  }
+    {
+      playerNumber: "One",
+      name: "Player 1",
+      url: "https://web.engr.oregonstate.edu/~perezalj/Benny/Beaver",
+      points: true,
+      color: "orange"
+    },
+    {
+      playerNumber: "Two",
+      name: "So mean :(",
+      url: "https://web.engr.oregonstate.edu/~perezalj/Benny/Beaver",
+      points: true,
+      color: "blue"
+    }
   ];
-  res.status(200).render('gamePal', { optionsPage: false, gameDice: true, myArray }  );
+  res.status(200).render('gamePal', gameData);// { optionsPage: false, gameDice: true, myArray });
 });
 
 app.post('/sendData', function (req, res, next) {
@@ -54,25 +56,25 @@ app.post('/sendData', function (req, res, next) {
   let serverData = true;
   if (req.body) {
     if (serverData) {
-      // fs.writeFile(
-      //   __dirname + '/serverData.json',
-      //   JSON.stringify({}, null, 2),
-      //   function (err, data) {
-      //     if (err) {
-      //       console.log('-- err:', err);
-      //       res.status(500).send('Error saving data in DB');
-      //     }
-      //     else
-      //       res.status(200).send('Data successfully saved to DB');
-      //   }
-      // );
-      console.log(req.body);
+      fs.writeFile(
+        __dirname + '/gameData.json',
+        JSON.stringify(req.body, null, 2),
+        function (err, data) {
+          if (err) {
+            console.log('-- err:', err);
+            res.status(500).send('Error saving data in DB');
+          }
+          else
+            res.status(200).send('Data successfully saved to DB');
+        }
+      );
     } else
       next();
   }
   else
     res.status(400).send("Request body did not contain required data :(");
 });
+
 app.get('*', function (req, res) {
   res.status(404).render('404');
 });
