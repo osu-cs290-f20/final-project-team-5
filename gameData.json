@@ -1,33 +1,16 @@
 {
-  "optionsPage": false,
-  "gameDice": true,
   "options": {
     "players": "1",
-    "timer": false,
-    "points": false,
-    "dice": false,
+    "timer": true,
+    "points": true,
+    "dice": true,
     "color": "orange"
   },
   "users": [
     {
       "playerNumber": 0,
-      "name": "Dylan",
-      "url": "Hi"
-    },
-    {
-      "playerNumber": 1,
-      "name": "",
-      "url": ""
-    },
-    {
-      "playerNumber": 2,
-      "name": "",
-      "url": ""
-    },
-    {
-      "playerNumber": 3,
-      "name": "",
-      "url": ""
+      "name": "Frost",
+      "url": "666"
     }
   ]
 }

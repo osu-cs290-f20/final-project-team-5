@@ -209,11 +209,11 @@ confirmButton.addEventListener('click', function (event) {
 
         let userData = [];
 
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < givenUsernames.length; i++) {
             let user = {
                 playerNumber: i,
-                name: username[i].value,
-                url: pictureURL[i].value
+                name: givenUsernames[i],
+                url: givenURLs[i]
             }
             userData.push(user);
         }
