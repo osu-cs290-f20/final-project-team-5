@@ -1,16 +1,39 @@
 {
-  "options": {
-    "players": "1",
-    "timer": true,
-    "points": true,
-    "dice": true,
-    "color": "orange"
-  },
-  "users": [
+  "options":{
+  "gameOptions":[
+  {
+    "gameDice": "true"	
+  }
+  ],
+  "users" : [
     {
-      "playerNumber": 0,
-      "name": "Frost",
-      "url": "666"
+        "playerNumber": "One",
+        "name": "Mal' Damba",
+        "url": "https://web.engr.oregonstate.edu/~perezalj/Benny/Beaver",
+        "points": "true",
+        "color": "orange"
+    },
+    {
+        "playerNumber": "Two",
+        "name": "Tiberius",
+        "url": "https://web.engr.oregonstate.edu/~perezalj/Benny/Beaver",
+        "points": "true",
+        "color": "green"    
+    },
+    {
+        "playerNumber": "Three",
+        "name": "Maeve",
+        "url": "https://web.engr.oregonstate.edu/~perezalj/Benny/Beaver",
+        "points": "true",
+        "color": "yellow"    
+    },
+    {
+        "playerNumber": "Four",
+        "name": "Evie",
+        "url": "https://web.engr.oregonstate.edu/~perezalj/Benny/Beaver",
+        "points": "true",
+        "color": "blue"    
     }
   ]
+  }
 }

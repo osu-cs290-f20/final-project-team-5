@@ -32,7 +32,7 @@ app.get('/', function (req, res, next) {
 
 
 app.get('/gameBuddy', function (req, res, next) {
-  var users = [
+  /*var users = [
     {
       playerNumber: "One",
       name: "Player 1",
@@ -48,7 +48,26 @@ app.get('/gameBuddy', function (req, res, next) {
       color: "blue"
     }
   ];
-  res.status(200).render('gamePal', /* gameData);// */ { optionsPage: false, gameDice: true, users });
+  
+{
+  "options": {
+    "players": "1",
+    "timer": true,
+    "points": true,
+    "dice": true,
+    "color": "orange"
+  },
+  "users": [
+    {
+      "playerNumber": 0,
+      "name": "Frost",
+      "url": "666"
+    }
+  ]
+}*/
+var options = gameData.options.gameOptions;
+var users = gameData.options.users;
+res.status(200).render('gamePal',{ gameOptions: false, gameDice: true, users});
 });
 
 app.post('/sendData', function (req, res, next) {
