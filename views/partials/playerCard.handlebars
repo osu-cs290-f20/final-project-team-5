@@ -1,18 +1,22 @@
 
 
 
-<div class="playerContainer" id="playerOne">
+<div class="playerContainer" id="player{{playerNumber}}">
 	<div class="playername">
-		<input type="text" class="playerName" maxlength="24"></input>
+	{{name}}
 	</div>
-	<div class="playerImage"></div>
+	<img src="{{url}}" alt="Custom Image" class="playerImage">
+	{{#if points}}
 	<div class="scoreText">
 		<p>SCORE: </p>
 	</div>
+	
+
 	<div class="score-box"></div>
 	<button class="nextButton">⏭</button>
 	<button class="addPointsButton">▲</button>
 	<button class="deductPointsButton">▼</button>
+	{{/if}}
  </div>
 
 
@@ -36,44 +40,3 @@
 
 
 
-<div class="playerContainer" id="playerTwo">
-	<div class="playerName">
-		<input type="text" class="playerName" maxlength="24"></input>
-	</div>
-	<div class="playerImage"></div>
-	<div class="scoreText">
-		<p>SCORE: </p>
-	</div>
-	<div class="score-box"></div>
-	<button class="nextButton">⏭</button>
-	<button class="addPointsButton">▲</button>
-	<button class="deductPointsButton">▼</button>
-</div>
-<div class="playerContainer" id="playerThree">
-	<div class="playerName">
-		<input type="text" class="playerName" maxlength="24"></input>
-	</div>
-	<div class="playerImage"></div>
-	<div class="scoreText">
-		<p>SCORE: </p>
-	</div>
-	<div class="score-box"></div>
-	<button class="nextButton">⏭</button>
-	<button class="addPointsButton">▲</button>
-	<button class="deductPointsButton">▼</button>
-</div>
-<div class="playerContainer" id="playerFour">
-	<div class="playerName">
-		<input type="text" class="playerName" maxlength="24"></input>
-	</div>
-	<div class="playerImage"></div>
-	<div class="scoreText">
-		<p>SCORE: </p>
-	</div>
-	<div class="score-box"></div>
-	<button class="nextButton">⏭</button>
-	<button class="addPointsButton">▲</button>
-	<button class="deductPointsButton">▼</button>
-	
-
-</div>
