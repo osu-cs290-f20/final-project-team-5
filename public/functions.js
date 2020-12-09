@@ -1,14 +1,12 @@
 rollDiceButton = document.getElementsByClassName("roll-button")
 
-rollDiceButton.addEventListener('click', rollDie())
-
-function rollDie(){
+rollDiceButton.addEventListener('click', ()=>{
     var rolledDice = document.getElementsByClassName("roll-results"); 
  //math.floor makes sure math.random doesnt return a decimal
     var d1 = Math.floor(Math.random() * 6) + 1;
     rolledDice.innerHTML = d1
     
- }
+ })
 
 // starts a timer that counts down for the provided number of minutes
 function timer(min, doThing) {
