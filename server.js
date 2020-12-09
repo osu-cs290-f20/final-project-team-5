@@ -33,7 +33,7 @@ Maybe I can parameterize the url? This will take some finagling*/
 app.get('/gameBuddy', function (req, res, next) {
   console.log("==This is where you think it is");
   console.log("==req.cookies:", req.cookies);
-  
+
   let numPlayers = req.cookies['players'].split(' ')[0];
   let color = req.cookies['color'].split(' ')[0];
   let timer = false;
@@ -124,21 +124,22 @@ app.get('/gameBuddy', function (req, res, next) {
 
 app.post('/sendData', function (req, res, next) {
   console.log('== req.body:', req.body);
-
+  let serverData = true;
   if (req.body) {
     if (serverData) {
-      fs.writeFile(
-        __dirname + '/serverData.json',
-        JSON.stringify({}, null, 2),
-        function (err, data) {
-          if (err) {
-            console.log('-- err:', err);
-            res.status(500).send('Error saving data in DB');
-          }
-          else
-            res.status(200).send('Data successfully saved to DB');
-        }
-      );
+      // fs.writeFile(
+      //   __dirname + '/serverData.json',
+      //   JSON.stringify({}, null, 2),
+      //   function (err, data) {
+      //     if (err) {
+      //       console.log('-- err:', err);
+      //       res.status(500).send('Error saving data in DB');
+      //     }
+      //     else
+      //       res.status(200).send('Data successfully saved to DB');
+      //   }
+      // );
+      console.log(req.body);
     } else
       next();
   }
