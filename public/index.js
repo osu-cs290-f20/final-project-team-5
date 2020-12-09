@@ -34,12 +34,11 @@ let toggleTimer;
 let ptCounter;
 let gameDice;
 let styleColor;
-let currentColor = optionContainer[0].classList[1];
+// let currentColor = optionContainer[0].classList[1];
 
 // set default color choice
 document.querySelector('.color-button.orange').style.border = '5px solid white';
 styleColor = 'orange';
-
 
 // used to test functions on click of any button
 colorButtons.addEventListener('click', function (event) {
@@ -53,9 +52,9 @@ colorButtons.addEventListener('click', function (event) {
     }
     target.style.border = '5px solid white';
     styleColor = target.textContent;
-    optionContainer[0].classList.remove(currentColor);
-    optionContainer[0].classList.add(styleColor);
-    currentColor = styleColor;
+    // optionContainer[0].classList.remove(currentColor);
+    // optionContainer[0].classList.add(styleColor);
+    // currentColor = styleColor;
 
 });
 

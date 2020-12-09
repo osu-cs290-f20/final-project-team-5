@@ -1,4 +1,6 @@
 {
+  "optionsPage": false,
+  "gameDice": true,
   "options": {
     "players": "4",
     "timer": true,

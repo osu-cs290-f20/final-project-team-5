@@ -21,17 +21,3 @@ function timer(min, doThing) {
         doThing(timeLeft);
     }
 }
-
-
-//this is the javaScript for the point counter. If need to move  to wherever you want.
-let btnAdd = document.querySelector('.addPointsButton');
-let btnSubtract = document.querySelector('.deductPointsButton');
-let input = document.querySelector('.score-box');
-
-btnAdd.addEventListener('click', ()=>{
-    input.value = parseInt(input.value) + 100;
-});
-
-btnSubtract.addEventListener('click', ()=>{
-    input.value = parseInt(input.value) - 100;
-});

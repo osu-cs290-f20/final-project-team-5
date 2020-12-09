@@ -48,7 +48,7 @@ app.get('/gameBuddy', function (req, res, next) {
       color: "blue"
     }
   ];
-  res.status(200).render('gamePal', gameData);// { optionsPage: false, gameDice: true, myArray });
+  res.status(200).render('gamePal', /* gameData);// */ { optionsPage: false, gameDice: true, myArray });
 });
 
 app.post('/sendData', function (req, res, next) {

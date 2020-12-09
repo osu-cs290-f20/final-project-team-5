@@ -1,9 +1,15 @@
 {{#if optionsPage}}
-{{>optionsPage}}
+	<script src="index.js" charset="utf-8" defer></script>
+    {{>optionsPage}}
 {{/if}}
+
 {{#unless optionsPage}}
-{{>dice}}
-{{#each users}}
-{{>playerCard}}
-{{/each}}
+    <script src="gamePal.js" charset="utf-8" defer></script>
+    {{#if gameDice}}
+        {{>dice}}
+    {{/if}}
+    
+    {{#each users}}
+        {{>playerCard}}
+    {{/each}}
 {{/unless}}
