@@ -32,7 +32,7 @@ app.get('/', function (req, res, next) {
 
 
 app.get('/gameBuddy', function (req, res, next) {
-  var myArray = [
+  var users = [
     {
       playerNumber: "One",
       name: "Player 1",
@@ -48,7 +48,7 @@ app.get('/gameBuddy', function (req, res, next) {
       color: "blue"
     }
   ];
-  res.status(200).render('gamePal', /* gameData);// */ { optionsPage: false, gameDice: true, myArray });
+  res.status(200).render('gamePal', /* gameData);// */ { optionsPage: false, gameDice: true, users });
 });
 
 app.post('/sendData', function (req, res, next) {
