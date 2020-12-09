@@ -227,8 +227,8 @@ confirmButton.addEventListener('click', function (event) {
         }
         console.log(pageData);
         sendDataToDB(pageData);
-        // window.location = "gameBuddy";
-        
+        setTimeout(switchWindow, 500);
+
         // timer(/* float input for number of minutes */ 1, function (num) {
         //     // num is number of seconds left in the timer
         //     console.log('Time Left: ' + Math.floor(num / 60) + ':' + num % 60);
@@ -237,5 +237,7 @@ confirmButton.addEventListener('click', function (event) {
         alert("Please enter player info first");
 });
 
-
+function switchWindow() {
+    window.location = "gameBuddy";
+}
 

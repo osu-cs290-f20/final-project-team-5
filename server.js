@@ -11,7 +11,6 @@ var express = require('express');
 var expressHandlebars = require('express-handlebars');
 // var cookieParser = require('cookie-parser');
 // const { json } = require('express');
-let gameData = require('./gameData.json')
 
 var app = express();
 var port = process.env.PORT || 8000;
@@ -32,6 +31,8 @@ app.get('/', function (req, res, next) {
 
 
 app.get('/gameBuddy', function (req, res, next) {
+  let gameData = require('./gameData.json');
+  console.log("Hello There!");
   var options = gameData.options;
   var users = gameData.users;
   res.status(200).render('gamePal', {
@@ -44,6 +45,7 @@ app.get('/gameBuddy', function (req, res, next) {
 });
 
 app.post('/sendData', function (req, res, next) {
+  let gameData = require('./gameData.json')
   console.log('== req.body:', req.body);
   if (req.body) {
     console.log(req.body);
@@ -60,7 +62,6 @@ app.post('/sendData', function (req, res, next) {
             res.status(200).send('Data successfully saved to DB');
         }
       );
-      gameData = require('./gameData.json');
     } else
       next();
   }
