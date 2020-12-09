@@ -80,7 +80,8 @@ confirmButton.addEventListener('click', function (event) {
     if (numPlayers == 4) {
         numPlayers = "four";
     }
-
+    console.log(numPlayers);
+    
     // Check if timer on or off
     let timerRadio = document.querySelector('input[name="Timer"]:checked');
     if (timerRadio.value === 'yes')
@@ -90,23 +91,23 @@ confirmButton.addEventListener('click', function (event) {
     console.log(timerRadio);
     console.log(toggleTimer);
 
-
     // Check if point counter on or off
-    if (document.getElementById("points-yes").checked) {
-        ptCounter = document.getElementById("points-yes").value;
-    }
-    else if (document.getElementById("points-no").checked) {
-        ptCounter = document.getElementById("points-no").value;
-    }
-
+    let pointRadio = document.querySelector('input[name="Points"]:checked');
+    if(pointRadio.value === 'yes')
+        ptCounter = true;
+    else
+        ptCounter = false;
+    console.log(pointRadio);
+    console.log(ptCounter);
+    
     // Check if dice counter on or off
-
-    if (document.getElementById("dice-yes").checked) {
-        gameDice = document.getElementById("dice-yes").value;
-    }
-    else if (document.getElementById("dice-no").checked) {
-        gameDice = document.getElementById("dice-no").value;
-    }
+    let diceRadio = document.querySelector('input[name="Dice"]:checked');
+    if(diceRadio.value === 'yes')
+        gameDice = true;
+    else
+        gameDice = false;
+    console.log(diceRadio);
+    console.log(gameDice);
 
     let pageData = {
         players: numPlayers,
@@ -161,6 +162,10 @@ window.onclick = function (event) {
 
 // Store Username and URL's here!!!
 submitInfo.onclick = function () {
+    console.log(username[0].value);
+    console.log(username[1].value);
+    console.log(username[2].value);
+    console.log(username[3].value);
 
     modal.style.display = "none";
     console.log("==test here");
