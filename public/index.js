@@ -66,6 +66,8 @@ colorButtons.addEventListener('click', function (event) {
     *** Still working on but feel free to edit... or trash it.***
 */
 
+
+
 // Modal
 var modal = document.getElementById("myModal");
 // Player Info Button
@@ -88,6 +90,8 @@ var givenUsernames = [];
 
 // Array that stores given urls in the same index as usernames
 var givenURLs = [];
+
+
 
 // When the user clicks the button, open the modal 
 btn.onclick = function () {
@@ -223,6 +227,7 @@ confirmButton.addEventListener('click', function (event) {
             users: userData
         }
         sendDataToDB(pageData);
+        window.location = "gameBuddy";
         // timer(/* float input for number of minutes */ 1, function (num) {
         //     // num is number of seconds left in the timer
         //     console.log('Time Left: ' + Math.floor(num / 60) + ':' + num % 60);

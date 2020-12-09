@@ -1,39 +1,26 @@
 {
-  "options":{
-  "gameOptions":[
-  {
-    "gameDice": "true"	
-  }
-  ],
-  "users" : [
+  "options": {
+    "players": "3",
+    "timer": false,
+    "points": false,
+    "dice": false,
+    "color": "orange"
+  },
+  "users": [
     {
-        "playerNumber": "One",
-        "name": "Mal' Damba",
-        "url": "https://web.engr.oregonstate.edu/~perezalj/Benny/Beaver",
-        "points": "true",
-        "color": "orange"
+      "playerNumber": 0,
+      "name": "Dylan",
+      "url": "Hi"
     },
     {
-        "playerNumber": "Two",
-        "name": "Tiberius",
-        "url": "https://web.engr.oregonstate.edu/~perezalj/Benny/Beaver",
-        "points": "true",
-        "color": "green"    
+      "playerNumber": 1,
+      "name": "Test",
+      "url": "One"
     },
     {
-        "playerNumber": "Three",
-        "name": "Maeve",
-        "url": "https://web.engr.oregonstate.edu/~perezalj/Benny/Beaver",
-        "points": "true",
-        "color": "yellow"    
-    },
-    {
-        "playerNumber": "Four",
-        "name": "Evie",
-        "url": "https://web.engr.oregonstate.edu/~perezalj/Benny/Beaver",
-        "points": "true",
-        "color": "blue"    
+      "playerNumber": 2,
+      "name": "Two",
+      "url": "Three"
     }
   ]
-  }
 }
