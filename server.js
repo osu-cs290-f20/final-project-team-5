@@ -33,10 +33,10 @@ app.get('/gameBuddy', function (req, res, next) {
   var myArray = [
   {
 	  playerNumber: "One", 
-	  name: "That's a haymaker brother", 
+	  name: "Player 1", 
 	  url: "https://web.engr.oregonstate.edu/~perezalj/Benny/Beaver", 
 	  points: true, 
-	  color: "blue"
+	  color: "orange"
   },
   {
 	  playerNumber: "Two", 
