@@ -248,11 +248,12 @@ input[type=number]::-webkit-outer-spin-button {
     box-shadow: 0 0 0 5px orange;
 	margin: 40px;
 }
-/*input name box*/
-#playerName
+/*changed from # to .*/
+.playerName
 {
-    border-style: solid;
-    border-color: gray;
+    border-style: double;
+    background-color: white;
+    border-color: rgb(215,63,9);
     width: 165px;
     margin-left:16%;
     margin-top: 10%;
@@ -307,7 +308,7 @@ input[type=number]::-webkit-outer-spin-button {
   height: 30px;
   width:50px;
   margin-left: 20%;
-  margin-top: -23%;
+  margin-top: -11%;
   right: 150px;
   top: 240px;
 }

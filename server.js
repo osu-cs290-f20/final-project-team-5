@@ -27,11 +27,11 @@ app.get('/', function (req, res, next) {
   console.log("== Hey I made it here");
   res.status(200).render('gamePal', { optionsPage: true });
 });
-
+/*I added the name:"john" since we were mmissing a player name.
 /*The next one is going to be the game with our choices. 
 Maybe I can parameterize the url? This will take some finagling*/
 app.get('/gameBuddy', function (req, res, next) {
-  res.status(200).render('gamePal', { optionsPage: false, gameDice: true, playerNumber: "One", url: "http:\\\\www.placeKitten.com\\480\\480", points: true});
+  res.status(200).render('gamePal', { optionsPage: false, gameDice: true, playerNumber: "One", name: "john", url: "http:\\\\www.placeKitten.com\\480\\480", points: true});
 });
 
 app.post('/sendData', function (req, res, next) {
