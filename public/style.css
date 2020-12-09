@@ -248,13 +248,14 @@ input[type=number]::-webkit-outer-spin-button {
 	margin: 40px;
 }
 /*input name box*/
-#playerName
+.playerName
 {
-    border-style: solid;
-    border-color: gray;
+    border-style: double;
+    border-color: rgb(215,63,9);
+    background-color: white;
     width: 165px;
     margin-left:16%;
-    margin-top: 10%;
+    margin-top: 3%;
     text-align: center;
 }
 /*can replace these with actual images later*/
@@ -264,7 +265,7 @@ input[type=number]::-webkit-outer-spin-button {
     background: white;
     height: 125px;
     width: 150px;
-    margin-top: 3%;
+    margin-top: 1%;
     margin-left: 18%;
 }
 /*SCORE. 12-8-2020; i added the position absolute and changed margin top on score text/box and deductPointsButton i changed margin top*/
@@ -306,7 +307,7 @@ input[type=number]::-webkit-outer-spin-button {
     height: 30px;
     width:50px;
     margin-left: 20%;
-    margin-top: -23%;
+    margin-top: -12%;
     right: 150px;
     top: 240px;
 }
