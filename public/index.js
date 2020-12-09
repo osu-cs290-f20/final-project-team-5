@@ -50,11 +50,12 @@ colorButtons.addEventListener('click', function (event) {
         if (buttons[i].style.border = '5px solid white')
             buttons[i].style.border = '2px solid black';
     }
+	currentColor = optionContainer[0].classList[1];
     target.style.border = '5px solid white';
     styleColor = target.textContent;
-    // optionContainer[0].classList.remove(currentColor);
-    // optionContainer[0].classList.add(styleColor);
-    // currentColor = styleColor;
+    optionContainer[0].classList.remove(currentColor);
+    optionContainer[0].classList.add(styleColor);
+    currentColor = styleColor;
 
 });
 
