@@ -32,50 +32,22 @@ app.get('/', function (req, res, next) {
 
 
 app.get('/gameBuddy', function (req, res, next) {
-  /*var users = [
-    {
-      playerNumber: "One",
-      name: "Player 1",
-      url: "https://web.engr.oregonstate.edu/~perezalj/Benny/Beaver",
-      points: true,
-      color: "orange"
-    },
-    {
-      playerNumber: "Two",
-      name: "So mean :(",
-      url: "https://web.engr.oregonstate.edu/~perezalj/Benny/Beaver",
-      points: true,
-      color: "blue"
-    }
-  ];
-  
-{
-  "options": {
-    "players": "1",
-    "timer": true,
-    "points": true,
-    "dice": true,
-    "color": "orange"
-  },
-  "users": [
-    {
-      "playerNumber": 0,
-      "name": "Frost",
-      "url": "666"
-    }
-  ]
-}*/
-var options = gameData.options.gameOptions;
-var users = gameData.options.users;
-res.status(200).render('gamePal',{ gameOptions: false, gameDice: true, users});
+  var options = gameData.options;
+  var users = gameData.users;
+  res.status(200).render('gamePal', {
+    optionsPage: false,
+    gameDice: options.dice,
+    color: options.color,
+    points: options.points,
+    users
+  });
 });
 
 app.post('/sendData', function (req, res, next) {
   console.log('== req.body:', req.body);
-  let serverData = true;
   if (req.body) {
     console.log(req.body);
-    if (serverData) {
+    if (gameData) {
       fs.writeFile(
         __dirname + '/gameData.json',
         JSON.stringify(req.body, null, 2),
@@ -88,6 +60,7 @@ app.post('/sendData', function (req, res, next) {
             res.status(200).send('Data successfully saved to DB');
         }
       );
+      gameData = require('./gameData.json');
     } else
       next();
   }

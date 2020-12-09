@@ -9,7 +9,12 @@
     {
       "playerNumber": "One",
       "name": "Frost",
-      "url": "654"
+      "url": "https://placekitten.com/360/360"
+    },
+    {
+      "playerNumber": "Two",
+      "name": "Kitty Cat friendo",
+      "url": "http://placekitten.com/945/945"
     }
   ]
 }
