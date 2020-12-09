@@ -28,10 +28,25 @@ app.get('/', function (req, res, next) {
   res.status(200).render('gamePal', { optionsPage: true });
 });
 
-/*The next one is going to be the game with our choices. 
-Maybe I can parameterize the url? This will take some finagling*/
+
 app.get('/gameBuddy', function (req, res, next) {
-  res.status(200).render('gamePal', { optionsPage: false, gameDice: true, playerNumber: "One", name: "Fuck you", url: "https://web.engr.oregonstate.edu/~perezalj/Benny/Beaver", points: true, color: "blue"}  );
+  var myArray = [
+  {
+	  playerNumber: "One", 
+	  name: "That's a haymaker brother", 
+	  url: "https://web.engr.oregonstate.edu/~perezalj/Benny/Beaver", 
+	  points: true, 
+	  color: "blue"
+  },
+  {
+	  playerNumber: "Two", 
+	  name: "So mean :(", 
+	  url: "https://web.engr.oregonstate.edu/~perezalj/Benny/Beaver", 
+	  points: true, 
+	  color: "blue"
+  }
+  ];
+  res.status(200).render('gamePal', { optionsPage: false, gameDice: true, myArray }  );
 });
 
 app.post('/sendData', function (req, res, next) {
