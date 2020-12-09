@@ -196,7 +196,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 /* this is for the orange border surrounding the whole game */
-.inGameContainer{
+.game-container{
     border-style: groove;
     border-width: 10px;
     display: grid;
@@ -241,7 +241,6 @@ input[type=number]::-webkit-outer-spin-button {
     border-style: solid;
     border-width: 5px;
     border-color: white;
-    background-color: rgb(255, 199, 94);
     width: 250px;
     height: 250px;
     border-radius: 25%;
@@ -268,22 +267,22 @@ input[type=number]::-webkit-outer-spin-button {
     margin-top: 3%;
     margin-left: 18%;
 }
-/*SCORE*/
+/*SCORE. 12-8-2020; i added the position absolute and changed margin top on score text/box and deductPointsButton i changed margin top*/
 .scoreText
-{
-  position: absolute;
-  margin-left: 1%;
-  margin-top: 5%;
+{   
+    position: absolute;
+    margin-left: 1%;
+    margin-top: 5%;
 }
 /*box that should later be replaced with an actual score counter*/
 .score-box
 {
-  background-color: white;
-  border-color: black;
-  width: 140px;
-  height: 20px;
-  margin-left: 25%;
-  margin-top: 4%;
+    background-color: white;
+    border-color: black;
+    width: 140px;
+    height: 20px;
+    margin-left: 25%;
+    margin-top: 4%;
 }
 /*skip button, need to add functionality to it later*/
 .nextButton
@@ -302,14 +301,14 @@ input[type=number]::-webkit-outer-spin-button {
 }
 /*down button*/
 .deductPointsButton
-{
-  position: absolute;
-  height: 30px;
-  width:50px;
-  margin-left: 20%;
-  margin-top: -23%;
-  right: 150px;
-  top: 240px;
+{  
+    position: absolute;
+    height: 30px;
+    width:50px;
+    margin-left: 20%;
+    margin-top: -23%;
+    right: 150px;
+    top: 240px;
 }
 /*these next css elements control the positioning of individual player cards, idk who did this but good job mate!*/
 #playerOne{
@@ -346,7 +345,6 @@ input[type=number]::-webkit-outer-spin-button {
     top: 600px;
 
 }
-
 /*for the orange square behind the player cards and stuff*/
 .square
 {
@@ -409,7 +407,6 @@ input[type=number]::-webkit-outer-spin-button {
     right:780px;
     bottom: 400px;
 }
-
 
 /* The Modal (background) */
 .modal {

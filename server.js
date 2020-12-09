@@ -9,7 +9,6 @@ var fs = require('fs');
 var path = require('path');
 var express = require('express');
 var expressHandlebars = require('express-handlebars');
-var cookieParser = require('cookie-parser');
 const { json } = require('express');
 var app = express();
 var port = process.env.PORT || 8000;
@@ -20,7 +19,6 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 
 app.use(express.static('public'));
-app.use(cookieParser());
 
 
 app.get('/', function (req, res, next) {
@@ -31,7 +29,7 @@ app.get('/', function (req, res, next) {
 /*The next one is going to be the game with our choices. 
 Maybe I can parameterize the url? This will take some finagling*/
 app.get('/gameBuddy', function (req, res, next) {
-  res.status(200).render('gamePal', { optionsPage: false, gameDice: true, playerNumber: "One", url: "http:\\\\www.placeKitten.com\\480\\480", points: true});
+  res.status(200).render('gamePal', { optionsPage: false, gameDice: true, playerNumber: "One", name: "Hey Pal", url: "http:\\\\www.placeKitten.com\\480\\480", points: true, color: "blue"});
 });
 
 app.post('/sendData', function (req, res, next) {
