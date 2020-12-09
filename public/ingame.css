@@ -68,14 +68,15 @@
     background: white;
     height: 125px;
     width: 150px;
-    margin-top: 1%;
+    margin-top: 3%;
     margin-left: 18%;
 }
-/*SCORE*/
+/*SCORE. 12-8-2020; i added the position absolute and changed margin top on score text/box and deductPointsButton i changed margin top*/
 .scoreText
-{
+{   
+    position: absolute;
     margin-left: 1%;
-    margin-top: -5%;
+    margin-top: 5%;
 }
 /*box that should later be replaced with an actual score counter*/
 .score-box
@@ -85,7 +86,7 @@
     width: 140px;
     height: 20px;
     margin-left: 25%;
-    margin-top: -14%;
+    margin-top: 4%;
 }
 /*skip button, need to add functionality to it later*/
 .nextButton
@@ -109,7 +110,7 @@
     height: 30px;
     width:50px;
     margin-left: 20%;
-    margin-top: -13%;
+    margin-top: -23%;
     right: 150px;
     top: 240px;
 }
