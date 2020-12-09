@@ -23,15 +23,15 @@ function timer(min, doThing) {
 }
 
 
-//this is the javaScript for the point counter. We may need to add 3 more of these for each player, since it think having 4 of the same one might result in player 3s add score button addding points to everybodies score.
-// let btnAdd = document.querySelector('#add');
-// let btnSubtract = document.querySelector('#subtract');
-// let input = document.querySelector('.score');
+//this is the javaScript for the point counter. If need to move  to wherever you want.
+let btnAdd = document.querySelector('.addPointsButton');
+let btnSubtract = document.querySelector('.deductPointsButton');
+let input = document.querySelector('.score-box');
 
-// btnAdd.addEventListener('click', ()=>{
-//     input.value = parseInt(input.value) + 100;
-// });
+btnAdd.addEventListener('click', ()=>{
+    input.value = parseInt(input.value) + 100;
+});
 
-// btnSubtract.addEventListener('click', ()=>{
-//     input.value = parseInt(input.value) - 100;
-// });
+btnSubtract.addEventListener('click', ()=>{
+    input.value = parseInt(input.value) - 100;
+});
