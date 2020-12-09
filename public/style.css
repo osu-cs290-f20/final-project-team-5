@@ -1,0 +1,473 @@
+/* Center the header*/
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(215,63, 9);
+  text-shadow: 2px 2px black;
+}
+
+/* Size of input box*/
+#players {
+  width: 50px;
+  margin-left: 75px;
+}
+
+/*Always show arrows in input text box*/
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+
+}
+
+/*Stuff for the header and surrounding box*/
+.game-container{
+    border-style: groove;
+    border-width: 10px;
+    display: grid;
+    max-width: 1000;
+    max-height: 1200;
+    border-color: orangered;
+    background-color: lightgray;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Background color styles*/
+.orange{
+    background:rgb(255, 182, 45); /* Model background color
+                                    subject to change */ 
+}
+
+.green{
+  background: green;
+}
+
+.yellow{
+  background: yellow;
+}
+
+.purple{
+  background: purple;
+}
+
+.blue{
+  background: blue;
+}
+
+.red{
+  background: red	;
+}
+.bennyPicture{
+    max-width: 15%;
+    max-height: 15%;
+    position: absolute;
+}
+
+.bennyPicture.leftPicture{
+  /*
+    left: 62.5px;
+    top: 187.5px;
+    */
+    left: 180px;
+    top: 350px;
+
+}
+.bennyPicture.rightPicture{
+  /*
+    right: 62.5px;
+    top: 187.5px;
+    */
+    left: 1420px;
+    top: 350px;
+}
+/* Center Game Pal container*/
+.option-container-block {
+  display: flex;
+  justify-content: center;
+}
+
+.option-container {
+  border-style: solid;
+  border-width: 10px;
+  border-color: white;
+  display: grid;
+  grid-template-columns: 20px 330px; /*330*/
+  grid-column-gap: 150px;
+  max-width: 500;
+  max-height: 600;            
+}
+
+.color-option-buttons {
+  margin-left: 25px;
+}
+
+
+.color-header {
+  margin-left: 6px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+.game-option-title {
+  margin-left: 5px;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+.playerInfo {
+  margin-top: 5%;
+  margin-left: 13%;
+}
+
+.accept-button {
+  max-width: 100px;
+  max-height: 40px;
+  display: absolute;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.game-option-name {
+  font-size: 20px;
+  border-style: inset;
+  width: 200px;
+  text-align: center;
+}
+
+.radio-buttons {
+  width: 100px;
+  margin-left: 50px;
+}
+
+.radio-yes {
+  display: inline-block;
+}
+
+.radio-no {
+  display: inline-block;
+}
+
+/* Added border to color buttons so
+  you can see the colors more easily
+  */
+.color-button {
+  padding: 0;
+  border: 2px solid black;
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.color-button.purple {
+  color: purple;
+}
+
+.color-button.red {
+  color: red;
+}
+
+.color-button.orange
+{
+  color: rgb(255, 182, 45); /* Model background color
+                                    subject to change */ ;
+}
+
+.color-button.blue {
+  color: blue;
+}
+
+.color-button.yellow {
+  color: yellow;
+}
+
+.color-button.green {
+  color: green;
+}
+
+
+
+/* this is for the orange border surrounding the whole game */
+.game-container{
+    border-style: groove;
+    border-width: 10px;
+    display: grid;
+    width: 1875px;
+    height: 875px;
+    border-color: orangered;
+    background-color: lightgray;
+    position: relative;
+}
+/* for the roll button*/
+.roll-button
+{
+    font-size: 20px;
+    background-color:rgb(238, 238, 238);
+    color: orangered;
+    border-style: inset;
+    border-width: 3px;
+    border-color: rgb(223, 223, 223);
+    width: 175px;
+    height: 75px;
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 835px;
+}
+/*this should later be replaced by an actualy output box for a dice roller*/
+.roll-results
+{
+    background-color: rgb(189, 189, 189);
+    border-color:rgb(78, 78, 78) ;
+    border-style: solid;
+    border-width: 1px;
+    width: 50px;
+    height: 75px;
+    position: absolute;
+    top: 8%;
+    left: 900px;
+}
+/*player cards*/
+.playerContainer
+{
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+    width: 250px;
+    height: 250px;
+    border-radius: 25%;
+    box-shadow: 0 0 0 5px orange;
+	margin: 40px;
+}
+/*input name box*/
+#playerName
+{
+    border-style: solid;
+    border-color: gray;
+    width: 165px;
+    margin-left:16%;
+    margin-top: 10%;
+    text-align: center;
+}
+/*can replace these with actual images later*/
+.playerImage{
+    border-style: solid;
+    border-color: white;
+    background: white;
+    height: 125px;
+    width: 150px;
+    margin-top: 3%;
+    margin-left: 18%;
+}
+/*SCORE. 12-8-2020; i added the position absolute and changed margin top on score text/box and deductPointsButton i changed margin top*/
+.scoreText
+{   
+    position: absolute;
+    margin-left: 1%;
+    margin-top: 5%;
+}
+/*box that should later be replaced with an actual score counter*/
+.score-box
+{
+    background-color: white;
+    border-color: black;
+    width: 140px;
+    height: 20px;
+    margin-left: 25%;
+    margin-top: 4%;
+}
+/*skip button, need to add functionality to it later*/
+.nextButton
+{
+    width: 50px;
+    height: 30px;
+    margin-left: 42%;
+    margin-top: 2%;
+}
+/*up button, need to add functionality to it later*/
+.addPointsButton
+{
+    width: 50px;
+    height:30.5px;
+    margin-top: 1%
+}
+/*down button*/
+.deductPointsButton
+{  
+    position: absolute;
+    height: 30px;
+    width:50px;
+    margin-left: 20%;
+    margin-top: -23%;
+    right: 150px;
+    top: 240px;
+}
+/*these next css elements control the positioning of individual player cards, idk who did this but good job mate!*/
+#playerOne{
+  position: absolute;
+  top: 0;
+  left: 0; 
+}
+
+#playerTwo{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#playerThree{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 60px;
+}
+
+#playerFour{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 60px;
+}
+/*this control the beaver picture.*/
+.bennyPicture{
+    max-width: 15%;
+    max-height: 15%;
+    position: absolute;
+    left: 775px;
+    top: 600px;
+
+}
+/*for the orange square behind the player cards and stuff*/
+.square
+{
+    height: 600px;
+    width: 600px;
+    background-color: orange;
+    transform: rotate(45deg);
+    position: absolute;
+    right:650px;
+    bottom: 125px;
+    border-radius: 10%;
+}
+
+.timeBox{
+    border-style: solid;
+    border-width: 3px;
+    border-color: grey;
+    background-color: white;
+    width: 150px;
+    height: 50px;
+    box-shadow: 0 0 0 2px black;
+    position: relative;
+    left: 845px;
+    bottom: 100px;
+
+}
+
+.startStop{
+    width: 60px;
+    height: 40px;
+    font-size: 25px;
+    position: absolute;
+    right:847px;
+    bottom: 400px;
+}
+
+.reset{
+    width: 60px;
+    height: 40px;
+    font-size: 20px;
+    position: absolute;
+    right:913px;
+    bottom: 400px;
+}
+
+.minusTime{
+    width: 60px;
+    height: 40px;
+    font-size: 25px;
+    position: absolute;
+    right:980px;
+    bottom: 400px;
+}
+
+.plusTime{
+    width: 60px;
+    height: 40px;
+    font-size: 25px;
+    position: absolute;
+    right:780px;
+    bottom: 400px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: rgb(254, 254, 254); /* White w/ Opacity */
+  margin: auto;
+  padding: 20px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: black;
+  width: 20%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 150%;
+  text-decoration: underline;
+}
+
+.person {
+  font-weight: bold;
+}
+
+.player-input-user {
+  padding-left: 12px;
+}
+
+.player-input-url {
+  padding-top: 10px;
+}
+
+#submitBtn {
+  margin-top: 10%;
+  margin-left: 42%;
+}
